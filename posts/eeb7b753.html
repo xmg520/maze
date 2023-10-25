@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+
+    
+<script>!function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("use-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()</script>
+    
+
+<meta charset="utf-8" >
+
+<title>docker基础命令</title>
+<meta name="keywords" content="docker基础命令, WuMing">
+<meta name="description" content="Docker基础命令,查看docker版本信息,拉取images">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="docker基础命令">
+<meta property="og:description" content="Docker基础命令,查看docker版本信息,拉取images">
+
+<link rel="shortcut icon" href="http://fast.wyjsjxh.com/img/favicon.ico">
+<link rel="stylesheet" href="/style/main.css">
+
+  <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="WuMing" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="WuMing" type="application/rss+xml">
+</head>
+  <body>
+    <div id="app" class="main">
+
+<div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://ncma.cn">
+        <img class="avatar" src="http://fast.wyjsjxh.com/img/avatar.png" alt="logo" width="32px" height="32px">
+      </a>
+      <a href="https://ncma.cn">
+        <h1 class="site-title">WuMing</h1>
+      </a>
+    </div>
+    <div class="right">
+        <i class="icon menu-switch icon-menu-outline" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="menu-container" style="height: 0;opacity: 0;">
+<nav class="menu-list">
+  
+    
+      <a href="/" class="menu purple-link">
+        首页
+      </a>
+    
+  
+    
+      <a href="/tags" class="menu purple-link">
+        标签
+      </a>
+    
+  
+    
+      <a href="/archives" class="menu purple-link">
+        归档
+      </a>
+    
+  
+    
+      <a href="/about" class="menu purple-link">
+        关于
+      </a>
+    
+  
+</nav>
+</div>
+
+
+
+  <div class="content-container">
+    <div class="post-detail">
+      
+      <h2 class="post-title">docker基础命令</h2>
+      <div class="post-info post-detail-info">
+        <span><i class="icon icon-calendar-outline"></i> 2023-10-10</span>
+        
+          <span>
+          <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="/tags/%E8%BF%90%E7%BB%B4/">
+              运维
+                
+                  ，
+                
+              </a>
+            
+              <a href="/tags/Docker/">
+              Docker
+                
+              </a>
+            
+          </span>
+        
+      </div>
+      <div class="post-content-wrapper">
+        <div class="post-content">
+          <h2 id="Docker基础命令"><a href="#Docker基础命令" class="headerlink" title="Docker基础命令"></a>Docker基础命令</h2><h2 id="查看docker版本信息"><a href="#查看docker版本信息" class="headerlink" title="查看docker版本信息"></a>查看docker版本信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker --version</span><br></pre></td></tr></table></figure>
+<h2 id="查看docker安装信息"><a href="#查看docker安装信息" class="headerlink" title="查看docker安装信息"></a>查看docker安装信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker info</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看本机Docker中存在哪些镜像"><a href="#查看本机Docker中存在哪些镜像" class="headerlink" title="查看本机Docker中存在哪些镜像"></a>查看本机Docker中存在哪些镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br></pre></td></tr></table></figure>
+
+<h2 id="检索images"><a href="#检索images" class="headerlink" title="检索images"></a>检索images</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker search images</span><br></pre></td></tr></table></figure>
+
+<h2 id="拉取images"><a href="#拉取images" class="headerlink" title="拉取images"></a>拉取images</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull images</span><br></pre></td></tr></table></figure>
+
+<h2 id="显示一个镜像的历史操作"><a href="#显示一个镜像的历史操作" class="headerlink" title="显示一个镜像的历史操作"></a>显示一个镜像的历史操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">history</span> images</span><br></pre></td></tr></table></figure>
+
+<h2 id="列出一个容器里面被改变的文件或者目录"><a href="#列出一个容器里面被改变的文件或者目录" class="headerlink" title="列出一个容器里面被改变的文件或者目录"></a>列出一个容器里面被改变的文件或者目录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker diff container</span><br></pre></td></tr></table></figure>
+
+<h2 id="列出当前所有正在运行的容器"><a href="#列出当前所有正在运行的容器" class="headerlink" title="列出当前所有正在运行的容器"></a>列出当前所有正在运行的容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br></pre></td></tr></table></figure>
+
+<h2 id="列出所有的容器"><a href="#列出所有的容器" class="headerlink" title="列出所有的容器"></a>列出所有的容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a</span><br></pre></td></tr></table></figure>
+
+<h2 id="列出最近一次启动的容器"><a href="#列出最近一次启动的容器" class="headerlink" title="列出最近一次启动的容器"></a>列出最近一次启动的容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -f</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看容器的相关信息"><a href="#查看容器的相关信息" class="headerlink" title="查看容器的相关信息"></a>查看容器的相关信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker inspect <span class="variable">$CONTAINER_ID</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="显示容器IP地址和端口号，如果输出是空的说明没有配置IP地址（不同的Docker容器可以通过此IP地址互相访问）"><a href="#显示容器IP地址和端口号，如果输出是空的说明没有配置IP地址（不同的Docker容器可以通过此IP地址互相访问）" class="headerlink" title="显示容器IP地址和端口号，如果输出是空的说明没有配置IP地址（不同的Docker容器可以通过此IP地址互相访问）"></a>显示容器IP地址和端口号，如果输出是空的说明没有配置IP地址（不同的Docker容器可以通过此IP地址互相访问）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker inspect --format=&#x27;&#123;&#123;.NetworkSettings.IPAddress&#125;&#125;&#x27; $CONTAINER_ID</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过容器生成新的镜像"><a href="#通过容器生成新的镜像" class="headerlink" title="通过容器生成新的镜像"></a>通过容器生成新的镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker commit -m <span class="string">&quot;Added ssh from centos&quot;</span> -a <span class="string">&quot;xiaoming&quot;</span> 4a4de4cf223d1 xiaoming/centos:v1</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数：</strong><br><code>-m</code>参数用来来指定提交的说明信息；<br><code>-a</code>可以指定用户信息的；<br><code>4a4de4cf223d1</code>代表的时容器的id；<br>birdben&#x2F;ubuntu:v1指定目标镜像的用户名、仓库名和 tag 信息。</p>
+<h2 id="构建一个容器"><a href="#构建一个容器" class="headerlink" title="构建一个容器"></a>构建一个容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker build -t=<span class="string">&quot;centos:v1&quot;</span> .</span><br></pre></td></tr></table></figure>
+
+<h2 id="参数："><a href="#参数：" class="headerlink" title="参数："></a>参数：</h2><p><code>-t</code>为构建的镜像制定一个标签，便于记忆&#x2F;索引等<br>指定Dockerfile文件在当前目录下，也可以替换为一个具体的<code>Dockerfile</code>的路径。</p>
+<h2 id="在docker中运行centos镜像"><a href="#在docker中运行centos镜像" class="headerlink" title="在docker中运行centos镜像"></a>在docker中运行centos镜像</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run &lt;相关参数&gt; &lt;镜像 ID&gt; &lt;初始命令&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="守护模式启动"><a href="#守护模式启动" class="headerlink" title="守护模式启动"></a>守护模式启动</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it centos:v1</span><br></pre></td></tr></table></figure>
+
+<h2 id="指定端口号启动"><a href="#指定端口号启动" class="headerlink" title="指定端口号启动"></a>指定端口号启动</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -p 80:80 centos:v1</span><br></pre></td></tr></table></figure>
+
+<h2 id="指定配置启动"><a href="#指定配置启动" class="headerlink" title="指定配置启动"></a>指定配置启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker run -d -p 10.211.55.4:9999:22 birdben/ubuntu:v1 <span class="string">&#x27;/usr/sbin/sshd&#x27;</span> -D</span><br></pre></td></tr></table></figure>
+
+<p>参数：<br><code>-d</code>：表示以“守护模式”执行，日志不会出现在输出终端上。<br><code>-i</code>：表示以“交互模式”运行容器，<code>-i</code> 则让容器的标准输入保持打开<br><code>-t</code>：表示容器启动后会进入其命令行，<code>-t</code> 选项让Docker分配一个伪终端（pseudo-tty）并绑定到容器的标准输入上<br><code>-v</code>：表示需要将本地哪个目录挂载到容器中，格式：-v &lt;宿主机目录&gt;:&lt;容器目录&gt;，-v 标记来创建一个数据卷并挂载到容器里。在一次 run 中多次使用可以挂载多个数据卷。<br><code>-p</code>：表示宿主机与容器的端口映射，此时将容器内部的 22 端口映射为宿主机的 9999 端口，这样就向外界暴露了 9999 端口，可通过 Docker 网桥来访问容器内部的 22 端口了。<br>注意：这里使用的是宿主机的 IP 地址：<code>10.211.55.4</code>，与对外暴露的端口号 9999，它映射容器内部的端口号 22。ssh外部需要访问：<code>ssh root@10.211.55.4 -p 9999</code><br>不一定要使用“镜像 ID”，也可以使用“仓库名:标签名”</p>
+<h2 id="start-启动容器"><a href="#start-启动容器" class="headerlink" title="start 启动容器"></a>start 启动容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker start 117843ade696117843ade696</span><br></pre></td></tr></table></figure>
+
+<h2 id="stop-停止正在运行的容器"><a href="#stop-停止正在运行的容器" class="headerlink" title="stop 停止正在运行的容器"></a>stop 停止正在运行的容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker stop 117843ade696117843ade696</span><br></pre></td></tr></table></figure>
+
+<h2 id="restart-重启容器"><a href="#restart-重启容器" class="headerlink" title="restart 重启容器"></a>restart 重启容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker restart 117843ade696117843ade696</span><br></pre></td></tr></table></figure>
+
+<h2 id="rm-删除容器"><a href="#rm-删除容器" class="headerlink" title="rm 删除容器"></a>rm 删除容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">rm</span> 117843ade696117843ade696</span><br></pre></td></tr></table></figure>
+
+<h2 id="rmi-删除镜像"><a href="#rmi-删除镜像" class="headerlink" title="rmi 删除镜像"></a>rmi 删除镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker rmi ed9c93747fe1Deleted</span><br></pre></td></tr></table></figure>
+
+<h2 id="登录Docker-Hub中心"><a href="#登录Docker-Hub中心" class="headerlink" title="登录Docker Hub中心"></a>登录Docker Hub中心</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker login</span><br></pre></td></tr></table></figure>
+
+<h2 id="发布上传image（push）"><a href="#发布上传image（push）" class="headerlink" title="发布上传image（push）"></a>发布上传image（push）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker push xiaoming/centos:v1</span><br></pre></td></tr></table></figure>
+        </div>
+          
+        <div class="top-div">
+          <ol class="top-box"><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#Docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="top-box-text">Docker基础命令</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%9F%A5%E7%9C%8Bdocker%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="top-box-text">查看docker版本信息</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%9F%A5%E7%9C%8Bdocker%E5%AE%89%E8%A3%85%E4%BF%A1%E6%81%AF"><span class="top-box-text">查看docker安装信息</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E6%9C%BADocker%E4%B8%AD%E5%AD%98%E5%9C%A8%E5%93%AA%E4%BA%9B%E9%95%9C%E5%83%8F"><span class="top-box-text">查看本机Docker中存在哪些镜像</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%A3%80%E7%B4%A2images"><span class="top-box-text">检索images</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%8B%89%E5%8F%96images"><span class="top-box-text">拉取images</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%98%BE%E7%A4%BA%E4%B8%80%E4%B8%AA%E9%95%9C%E5%83%8F%E7%9A%84%E5%8E%86%E5%8F%B2%E6%93%8D%E4%BD%9C"><span class="top-box-text">显示一个镜像的历史操作</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%88%97%E5%87%BA%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8%E9%87%8C%E9%9D%A2%E8%A2%AB%E6%94%B9%E5%8F%98%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%96%E8%80%85%E7%9B%AE%E5%BD%95"><span class="top-box-text">列出一个容器里面被改变的文件或者目录</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%88%97%E5%87%BA%E5%BD%93%E5%89%8D%E6%89%80%E6%9C%89%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="top-box-text">列出当前所有正在运行的容器</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="top-box-text">列出所有的容器</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%88%97%E5%87%BA%E6%9C%80%E8%BF%91%E4%B8%80%E6%AC%A1%E5%90%AF%E5%8A%A8%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="top-box-text">列出最近一次启动的容器</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="top-box-text">查看容器的相关信息</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%98%BE%E7%A4%BA%E5%AE%B9%E5%99%A8IP%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7%EF%BC%8C%E5%A6%82%E6%9E%9C%E8%BE%93%E5%87%BA%E6%98%AF%E7%A9%BA%E7%9A%84%E8%AF%B4%E6%98%8E%E6%B2%A1%E6%9C%89%E9%85%8D%E7%BD%AEIP%E5%9C%B0%E5%9D%80%EF%BC%88%E4%B8%8D%E5%90%8C%E7%9A%84Docker%E5%AE%B9%E5%99%A8%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E6%AD%A4IP%E5%9C%B0%E5%9D%80%E4%BA%92%E7%9B%B8%E8%AE%BF%E9%97%AE%EF%BC%89"><span class="top-box-text">显示容器IP地址和端口号，如果输出是空的说明没有配置IP地址（不同的Docker容器可以通过此IP地址互相访问）</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E9%80%9A%E8%BF%87%E5%AE%B9%E5%99%A8%E7%94%9F%E6%88%90%E6%96%B0%E7%9A%84%E9%95%9C%E5%83%8F"><span class="top-box-text">通过容器生成新的镜像</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8"><span class="top-box-text">构建一个容器</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="top-box-text">参数：</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%9C%A8docker%E4%B8%AD%E8%BF%90%E8%A1%8Ccentos%E9%95%9C%E5%83%8F"><span class="top-box-text">在docker中运行centos镜像</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%AE%88%E6%8A%A4%E6%A8%A1%E5%BC%8F%E5%90%AF%E5%8A%A8"><span class="top-box-text">守护模式启动</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%8C%87%E5%AE%9A%E7%AB%AF%E5%8F%A3%E5%8F%B7%E5%90%AF%E5%8A%A8"><span class="top-box-text">指定端口号启动</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%8C%87%E5%AE%9A%E9%85%8D%E7%BD%AE%E5%90%AF%E5%8A%A8"><span class="top-box-text">指定配置启动</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#start-%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="top-box-text">start 启动容器</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#stop-%E5%81%9C%E6%AD%A2%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="top-box-text">stop 停止正在运行的容器</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#restart-%E9%87%8D%E5%90%AF%E5%AE%B9%E5%99%A8"><span class="top-box-text">restart 重启容器</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#rm-%E5%88%A0%E9%99%A4%E5%AE%B9%E5%99%A8"><span class="top-box-text">rm 删除容器</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#rmi-%E5%88%A0%E9%99%A4%E9%95%9C%E5%83%8F"><span class="top-box-text">rmi 删除镜像</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E7%99%BB%E5%BD%95Docker-Hub%E4%B8%AD%E5%BF%83"><span class="top-box-text">登录Docker Hub中心</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%8F%91%E5%B8%83%E4%B8%8A%E4%BC%A0image%EF%BC%88push%EF%BC%89"><span class="top-box-text">发布上传image（push）</span></a></li></ol>
+        </div>
+          
+      </div>
+    </div>
+
+    
+      <div class="next-post">
+        <a class="purple-link" href="/posts/4a17b156.html">
+          <h3 class="post-title">
+            下一篇：Hexo快捷键
+          </h3>
+        </a>
+      </div>
+    
+  </div>
+
+
+    <div id="gitalk-container"></div>
+
+
+
+
+
+
+<script>
+    (function () {
+        const jq = document.createElement('script');
+        jq.src = "/js/twikoo.min.js";
+        document.getElementsByTagName('body')[0].appendChild(jq);
+
+        const config = {"envId":"http://43.154.48.215:8099","region":null,"mark":null};
+        jq.onload = function () {
+            twikoo.init({
+                envId: config.envId,
+                el: '#gitalk-container',
+                region: config.region,
+                path: location.pathname + (config.mark ? '?mark=' + config.mark : ''),
+                lang: config.language,
+            });
+        }
+    })()
+</script>
+
+
+
+
+<footer>
+<div class="site-footer">
+  <div class="social-container">
+    
+      
+        <a aria-label="跳转至github" href="https://github.com/f-dong" target="_blank">
+          <i class="icon icon-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <a href="https://github.com/f-dong/hexo-theme-minimalism" target="_blank">Theme</a>
+  
+  
+  
+  
+  
+  
+</div>
+</footer>
+
+
+      </div>
+    </div>
+    
+<script id="hexo-configurations"> window.theme_config = {"image":{"lazyload_enable":true,"photo_zoom":"simple-lightbox"}}; window.is_post = true; </script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+
